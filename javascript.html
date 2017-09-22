@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+	<head>
+		
+		<title></title>
+		<meta charset="UTF-8"> 
+		<script lang = "javascript">
+
+			// function will be executed upon user clicking button
+			function buttonClick() {
+				// data entered into field (input id="thename")is stored
+				// into variable inputCtrl
+				var inputCtrl = document.getElementById("thename");
+				var newName = inputCtrl.value;
+				console.log(newName);
+				var spanCtrl = document.getElementById("theMessage");
+				spanCtrl.textContent = "Thanks for doing that fam";
+				var checkCtrl = document.getElementById("chkBox")
+				if(checkCtrl.checked) {
+						spanCtrl.textContent += "  -appreciate it!";
+				} else {
+					spanCtrl.textContent += "  -dumbass!";
+				}
+			}
+
+			function bodyLoad() {
+			// stores data inside tag with Id "whatever" into pCtrl
+			var pCtrl = document.getElementById("whatever");
+
+			var txt = pCtrl.textContent;
+			pCtrl.textContent += " - God"
+			}
+		</script>
+	</head>
+	<!-- bodyLoad function is called upon once body is loaded -->
+	<body onload="bodyLoad()">
+		
+		<p id="whatever">This is the greastest webpage ever made</p>
+
+		<input id="thename" type="text" placeholder="Enter your name plz" value="">
+		<button onclick="buttonClick()">it's lit fam! click this!</button>
+		<span id="theMessage"> No message bitch</span>
+		<p>
+			<input id="chkBox" type="checkbox">Clean responses only!</input>
+		</p>
+
+	</body>
+</html>

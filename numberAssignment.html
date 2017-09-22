@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+	<head>
+		
+		<title>Guess a Number!</title>
+		<meta charset="UTF-8"> 
+
+		<style>
+
+		</style>
+
+
+		 <script type="text/javascript">
+
+			var num = 0;
+
+			function dec() {
+				//console.log("called dec()");
+				num--;
+				console.log(num);
+				display();
+			}
+
+			function inc() {
+				//console.log("called inc()");
+				num++;
+				console.log(num);
+				display();
+		}
+			function display() {
+				var ctrl = document.getElementById("theNumber");
+				ctrl.value = num;
+				if (num % 2 === 0) {
+					ctrl.style.color = "red"
+					}
+					else {
+						ctrl.style.color = "black"
+					}
+				}
+		</script>
+	</head>
+	<body>
+	<button onclick="dec()"> - </button>
+	<input type ="text" id ="theNumber" value="0" style="text-align: center;
+	color: black;"></input>
+	<button onclick="inc()"> + </button>
+	</body>
+</html>

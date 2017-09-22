@@ -1,0 +1,17 @@
+body {
+	font-family: Helvetica;
+	font-size: 16pt;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	color: red;
+}
+a:hover {
+	background-color: yellow;
+}
+a:active {
+	background-color: green;
+	color: white;
+}
